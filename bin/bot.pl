@@ -9,7 +9,7 @@ use lib "$FindBin::Bin/../lib";
 use Bot::BasicBot::Pluggable;
 
 my $bot = Bot::BasicBot::Pluggable->new(
-    channels => ["#duckduckgo-test"],
+    channels => ["#duckduckgo"],
     server   => "irc.freenode.net",
     nick     => "WebFeat",
     name     => "A bot for ducks",
@@ -17,7 +17,11 @@ my $bot = Bot::BasicBot::Pluggable->new(
 
 my $help = $bot->load('DuckCoHelp');
 
+my $welcome = $bot->load('WebClientWelcome');
+
 my $seen = $bot->load('Seen');
+
+my $cpan = $bot->load('CPANLinks');
 
 my $title = $bot->load('Title');
 
